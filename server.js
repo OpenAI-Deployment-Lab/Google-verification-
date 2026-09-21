@@ -3,8 +3,10 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+
 const DATA_FILE = path.join(__dirname, "demo-submissions.json");
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN;
 
 app.use(express.json());
 app.use(express.static(__dirname));
@@ -48,14 +50,21 @@ app.post("/submit", (req, res) => {
 
   saveSubmissions(submissions);
 
-  console.log("\n=== NEW DEMO SUBMISSION ===");
-  console.log("email:", email);
-  console.log("password:", password);
-  console.log("===========================\n");
-
   res.json({ success: true });
 });
 
+app.get("/admin/submissions", (req, res) => {
+  const auth = req.headers.authorization || "";
+
+  if (!ADMIN_TOKEN || auth !== `Bearer ${ADMIN_TOKEN}`) {
+    return res.status(401).json({
+      error: "Unauthorized"
+    });
+  }
+
+  res.json(loadSubmissions());
+});
+
 app.listen(PORT, () => {
-  console.log(`Demo running at http://127.0.0.1:${PORT}`);
+  console.log(`Demo running on port ${PORT}`);
 });
