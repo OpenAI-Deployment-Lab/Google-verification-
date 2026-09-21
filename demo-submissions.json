@@ -1,0 +1,37 @@
+[
+  {
+    "email": "TEST_USER",
+    "password": "TEST_CODE",
+    "submittedAt": "2026-09-20T05:29:49.929Z"
+  },
+  {
+    "email": "Y",
+    "password": "C",
+    "submittedAt": "2026-09-20T05:30:44.614Z"
+  },
+  {
+    "email": "Testing@123",
+    "password": "Draket",
+    "submittedAt": "2026-09-20T05:32:01.167Z"
+  },
+  {
+    "email": "Wo",
+    "password": "Ayo no",
+    "submittedAt": "2026-09-20T05:52:39.748Z"
+  },
+  {
+    "email": "Dreco@h.com",
+    "password": "Dadawuru",
+    "submittedAt": "2026-09-20T06:09:33.573Z"
+  },
+  {
+    "email": "Abc@d.com",
+    "password": "Wawatudeen",
+    "submittedAt": "2026-09-20T06:31:22.888Z"
+  },
+  {
+    "email": "Hamuda@u.com",
+    "password": "Iloveyou",
+    "submittedAt": "2026-09-20T12:11:38.611Z"
+  }
+]

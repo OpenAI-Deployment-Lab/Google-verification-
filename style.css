@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8fafd;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202124;
+}
+
+/* Demo warning */
+.demo-banner {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background: #fff3cd;
+  color: #664d03;
+  border-bottom: 1px solid #ffe69c;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Main layout */
+.container {
+  min-height: calc(100vh - 45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Main card */
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+/* Google + OpenAI demo branding */
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+/* Google-inspired text */
+.google-demo {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* Google-style letter colors */
+.blue {
+  color: #4285f4;
+}
+
+.red {
+  color: #ea4335;
+}
+
+.yellow {
+  color: #fbbc05;
+}
+
+.green {
+  color: #34a853;
+}
+
+/* Separator */
+.divider {
+  color: #9aa0a6;
+  font-size: 22px;
+}
+
+/* Uploaded OpenAI image */
+.openai-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Demo label */
+.demo-label {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #b3261e;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+/* Description */
+.subtitle {
+  text-align: center;
+  color: #5f6368;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Form labels */
+label {
+  display: block;
+  font-size: 14px;
+  margin: 18px 0 7px;
+}
+
+/* Form inputs */
+input {
+  width: 100%;
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+input:focus {
+  border: 2px solid #4285f4;
+}
+
+/* verify button */
+button {
+  width: 100%;
+  margin-top: 28px;
+  height: 46px;
+  border: none;
+  border-radius: 4px;
+  background: #1a73e8;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1765cc;
+}
+
+/* Result message */
+.result {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 5px;
+  background: #e6f4ea;
+  color: #137333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Security/demo notice */
+.notice {
+  margin-top: 25px;
+  color: #5f6368;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .container {
+    padding: 12px;
+    align-items: flex-start;
+    padding-top: 35px;
+  }
+
+  .card {
+    padding: 28px 22px;
+  }
+
+  .google {
+    font-size: 25px;
+  }
+
+  .openai-logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+.result.error {
+  display: block;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: #fce8e6;
+  border: 1px solid #ea4335;
+  border-radius: 6px;
+  color: #b3261e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.result.success {
+  display: block;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: #e6f4ea;
+  border: 1px solid #b7dfc0;
+  border-radius: 6px;
+  color: #137333;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}

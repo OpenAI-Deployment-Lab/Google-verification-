@@ -1,0 +1,35 @@
+const form = document.getElementById("verificationForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const referral = document.getElementById("referral").value.trim();
+
+  if (!username || !p) {
+    result.className = "result";
+    result.textContent = "Please enter both fields.";
+    return;
+  }
+
+  const response = await fetch("/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email,
+      password: password
+    })
+  });
+
+  if (response.ok) {
+    result.className = "result";
+    result.textContent = "Demo submission received.";
+    form.reset();
+  } else {
+    result.className = "result";
+    result.textContent = "Submission failed.";
+  }
+});
